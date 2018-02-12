@@ -43,8 +43,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" >
-                    <TextBox Margin="15 0 0 0" Width="150"/>
-                    <Button Click="clickAdd" 
+                    <TextBox Margin="15 0 0 15" Width="150" Text="{Binding Path = NewTransactionQuantity}"/>
+                    <Button Command="{Binding AddCommand}" 
                         Content="add" 
                         Width="80" Margin="15 0 0 0"
                         HorizontalAlignment="Right"/>
@@ -62,12 +62,11 @@
                     </ComboBox>
                 </StackPanel>
 
-                <ListView x:Name="table" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 10 10 0" ItemsSource="{Binding List}">
+                <ListView x:Name="table" Grid.Row="0" SelectedItem="{Binding SelectedTransaction}" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 10 10 0" ItemsSource="{Binding BankTransactions}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=sign}">operation</GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=cost}">cost</GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=date}">date</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Quantity}">cost</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Time}">date</GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>

@@ -88,6 +88,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="mvvm\BankTransaction.cs" />
+    <Compile Include="mvvm\OrganizerViewModel.cs" />
+    <Compile Include="mvvm\RelayCommand.cs" />
     <Compile Include="NewModel\CollectionModel.cs" />
     <Compile Include="NewModel\IDataModel.cs" />
     <Compile Include="NewModel\MainViewModel.cs" />
@@ -97,6 +100,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
